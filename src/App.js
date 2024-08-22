@@ -1,14 +1,13 @@
-import Counter from './Components/Counter/Counter';
-import CounterUE from './Components/CounterUE/CounterUE';
-import Frequent from './Components/Frequent/Frequent';
+import Router from './Components/Router';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { RouterProvider } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className='flex flex-col items-center'>
-      <Counter />
-      <Frequent />
-      <CounterUE />
-    </div>
+
+    <RouterProvider router={Router} />
+
   );
 }
 

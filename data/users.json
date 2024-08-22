@@ -1,0 +1,28 @@
+{
+    "users" : [
+        {
+            "id": 1,
+            "name": "Ahmed",
+            "age": 25,
+            "city": "Cairo"
+        },
+        {
+            "id": 2,
+            "name": "Sara",
+            "age": 22,
+            "city": "Alexandria"
+        },
+        {
+            "id": 3,
+            "name": "Mohamed",
+            "age": 30,
+            "city": "Giza"
+        },
+        {
+            "id": 4,
+            "name": "Fatma",
+            "age": 28,
+            "city": "Luxor"
+        }
+    ]
+}
