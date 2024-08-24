@@ -13,6 +13,9 @@ import UserLayout from "../Layout/UserLayout";
 import AdminLayout from "../Layout/AdminLayout";
 import UserMessage from "../UserMessage";
 import DashBoard from "../DashBoard";
+import AddProduct from "../AddProduct";
+import AddAdmin from "../AddAdmin";
+import Accounts from "../Accounts";
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +32,9 @@ const Router = createBrowserRouter(
       <Route path="admin" element={<AdminLayout />}>
         <Route index element={<DashBoard />} />
         <Route path="messages" element={<UserMessage />} />
+        <Route path="addproduct" element={<AddProduct />} />
+        <Route path="addadmin" element={<AddAdmin />} />
+        <Route path="admins" element={<Accounts />} />
       </Route>
     </>
   )

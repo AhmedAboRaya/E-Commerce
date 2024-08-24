@@ -1,28 +1,76 @@
 {
-    "users" : [
-        {
-            "id": 1,
-            "name": "Ahmed",
-            "age": 25,
-            "city": "Cairo"
-        },
-        {
-            "id": 2,
-            "name": "Sara",
-            "age": 22,
-            "city": "Alexandria"
-        },
-        {
-            "id": 3,
-            "name": "Mohamed",
-            "age": 30,
-            "city": "Giza"
-        },
-        {
-            "id": 4,
-            "name": "Fatma",
-            "age": 28,
-            "city": "Luxor"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "fname": "Ahmed",
+      "lname": "AboRaya",
+      "email": "ahmed.user@example.com",
+      "pass": "user123",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "fname": "Sara",
+      "lname": "Mohamed",
+      "email": "sara.admin@example.com",
+      "pass": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "fname": "Mohamed",
+      "lname": "Ali",
+      "email": "mohamed.user@example.com",
+      "pass": "user456",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "fname": "Fatma",
+      "lname": "Hassan",
+      "email": "fatma.admin@example.com",
+      "pass": "admin456",
+      "role": "admin"
+    },
+    {
+      "id": 5,
+      "fname": "Omar",
+      "lname": "Farouk",
+      "email": "omar.user@example.com",
+      "pass": "user789",
+      "role": "user"
+    },
+    {
+      "id": 6,
+      "fname": "Laila",
+      "lname": "Saad",
+      "email": "laila.admin@example.com",
+      "pass": "admin789",
+      "role": "admin"
+    },
+    {
+      "id": "fece",
+      "fname": "Ahmed",
+      "lname": "Mahmoud",
+      "email": "ahmedaboraya399@gmail.com",
+      "pass": "123",
+      "role": "admin"
+    },
+    {
+      "id": "89c7",
+      "fname": "new",
+      "lname": "Admin",
+      "email": "NA@e.com",
+      "pass": "123",
+      "role": "admin"
+    },
+    {
+      "id": "a9a8",
+      "fname": "Rania",
+      "lname": "Elmorabet",
+      "email": "rania@ex.com",
+      "pass": "123",
+      "role": "admin"
+    }
+  ]
 }

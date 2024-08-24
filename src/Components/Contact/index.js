@@ -18,16 +18,16 @@ const Contact = ({}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
+
     try {
-      const response = await fetch('http://localhost:5000/messages', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5000/messages", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setFormData({ name: "", email: "", message: "" });
       } else {
@@ -37,7 +37,9 @@ const Contact = ({}) => {
       console.error("Error:", error);
       alert("Error sending message");
     } finally {
-      setIsSubmitting(false);
+      setTimeout(() => {
+        setIsSubmitting(false);
+      }, 1000);
     }
   };
 
@@ -49,7 +51,10 @@ const Contact = ({}) => {
         className="w-full max-w-md space-y-4 bg-white p-6 rounded-lg shadow-md"
       >
         <div className="space-y-2">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700"
+          >
             Name
           </label>
           <input
@@ -63,7 +68,10 @@ const Contact = ({}) => {
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
             Email
           </label>
           <input
@@ -77,7 +85,10 @@ const Contact = ({}) => {
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-gray-700"
+          >
             Message
           </label>
           <textarea
@@ -93,7 +104,13 @@ const Contact = ({}) => {
         <div className="flex justify-center">
           <Button
             type="submit"
-            txt={isSubmitting ? <Spinner animation="border" style={{ color: "#e274a9" }} /> : "Send"}
+            txt={
+              isSubmitting ? (
+                <Spinner animation="border" style={{ color: "#e274a9" }} />
+              ) : (
+                "Send"
+              )
+            }
             style={
               "bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold px-4 py-2"
             }

@@ -1,6 +1,15 @@
 import Button from "./Button";
 
-const Card = ({ brand, name, price, image, confirmation, editDialog }) => {
+const Card = ({
+  brand,
+  name,
+  price,
+  image,
+  confirmation,
+  category,
+  specs,
+  editDialog,
+}) => {
   return (
     <>
       <div className="flex flex-col p-3 w-[300px] rounded-lg shadow-md m-2 border-2 border-[#e274a9] cursor-pointer">
@@ -15,11 +24,22 @@ const Card = ({ brand, name, price, image, confirmation, editDialog }) => {
             <ol className="space-y-2 pl-2">
               <li>Brand: {brand}</li>
               <li>Price: {price}$</li>
+              {category === "Mobile" ? (
+                <>
+                  <li>Camera: {specs.camera}</li>
+                  <li>Battery: {specs.battery}</li>
+                </>
+              ) : (
+                <>
+                  <li>Ram: {specs.ram}</li>
+                  <li>Processor: {specs.processor}</li>
+                </>
+              )}
             </ol>
           </h6>
         </div>
 
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row space-x-2 mt-3">
           <div onClick={() => confirmation()} className="w-full">
             <Button
               txt={"Delete"}

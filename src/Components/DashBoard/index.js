@@ -9,7 +9,10 @@ const Shop = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState();
 
-  let [isOpen, setIsOpen] = useState(false)
+  const [reload, setReload] = useState(false);
+
+  let [isOpen, setIsOpen] = useState(false);
+  let [editModalOpen, setEditModalOpen] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8000/products")
@@ -26,7 +29,7 @@ const Shop = () => {
           setIsLoading(false);
         }, 1000);
       });
-  },[]);
+  },[reload]);
 
   function closeModal() {
     setIsOpen(false)
@@ -38,11 +41,21 @@ const Shop = () => {
     setSelectedProduct(product);
   }
 
+  function openEditModal(product) {
+    setEditModalOpen(true);
+    setSelectedProduct(product);
+  }
+
+  function closeEditModal() {
+    setEditModalOpen(false);
+  }
+
+
   const handleDeleteProduct = (id)=> {
-  //   fetch(`http://localhost:8000/products/${id}`, {
-  //     method: 'DELETE',
-  //   })
-  //  .then(response => response.json());
+    fetch(`http://localhost:8000/products/${id}`, {
+      method: 'DELETE',
+    })
+   .then(response => response.json());
     setProducts(products.filter(product => product.id!== id));
     console.log(id);
     closeModal();
@@ -73,8 +86,10 @@ const Shop = () => {
                 price={product.price}
                 brand={product.brand}
                 image={product.image}
+                category={product.category}
+                specs={product.specs}
                 confirmation={() => openModal(product)}
-                editDialog={() => openModal(product)}
+                editDialog={() => openEditModal(product)}
               />
             ))
             }
@@ -90,15 +105,17 @@ const Shop = () => {
                 price={product.price}
                 brand={product.brand}
                 image={product.image}
+                category={product.category}
+                specs={product.specs}
                 confirmation={() => openModal(product)}
-                editDialog={() => openModal(product)}
+                editDialog={() => openEditModal(product)}
               />
             ))}
           </div>
         </div>
       )}
       <DeleteModal closeModal={closeModal} openModal={openModal} isOpen={isOpen} selectedProduct={selectedProduct} deleteProduct={handleDeleteProduct}/>
-      
+      <EditModal closeModal={closeEditModal} openModal={openEditModal} isOpen={editModalOpen} selectedProduct={selectedProduct} deleteProduct={handleDeleteProduct} reload={reload} setReload={setReload}/>
     </>
   );
 };

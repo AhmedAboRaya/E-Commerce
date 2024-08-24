@@ -1,35 +1,51 @@
 {
   "products": [
     {
-      "id": 1,
-      "category": "Mobile",
       "name": "iPhone 14 Pro",
+      "price": "999",
       "brand": "Apple",
-      "price": 999,
+      "screenSize": "6.6 inches",
+      "storage": "128GB",
+      "category": "Mobile",
+      "camera": "12MP",
+      "battery": "3095mAh",
+      "ram": "",
+      "processor": "",
+      "image": "https://btech.com/media/catalog/product/a/p/apple-iphone-14-pro-max-6gb-256gb-silver.jpg?width=660&store=en&image-type=image.png",
       "specs": {
-        "screenSize": "6.1 inches",
+        "screenSize": "6.6 inches",
+        "ram": "",
         "storage": "128GB",
+        "processor": "",
         "camera": "12MP",
         "battery": "3095mAh"
       },
-      "image": "https://btech.com/media/catalog/product/a/p/apple-iphone-14-pro-max-6gb-256gb-silver.jpg?width=660&store=en&image-type=image.png"
+      "id": "1"
     },
     {
-      "id": 2,
-      "category": "Mobile",
-      "name": "Samsung Galaxy S23",
+      "name": "Samsung Galaxy ",
+      "price": "810",
       "brand": "Samsung",
-      "price": 899,
+      "screenSize": "6.2 inches",
+      "storage": "256GB",
+      "category": "Mobile",
+      "camera": "50MP",
+      "battery": "3700mAh",
+      "ram": "",
+      "processor": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png",
       "specs": {
         "screenSize": "6.2 inches",
+        "ram": "",
         "storage": "256GB",
+        "processor": "",
         "camera": "50MP",
         "battery": "3700mAh"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png"
+      "id": "2"
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "Mobile",
       "name": "Google Pixel 7",
       "brand": "Google",
@@ -43,7 +59,7 @@
       "image": "https://m.media-amazon.com/images/I/7173p0j-mbL.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "category": "Laptop",
       "name": "MacBook Air M2",
       "brand": "Apple",
@@ -57,7 +73,7 @@
       "image": "https://smartkoshk.com/cdn/shop/files/MacBook-Air-M2-Egypt-5.png?v=1697885818&width=1946.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "category": "Laptop",
       "name": "Dell XPS 13",
       "brand": "Dell",
@@ -71,7 +87,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKb1WjsGrjvywGOytnLSKC5gjrfiPiwS2BA&s.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "category": "Laptop",
       "name": "HP Spectre x360",
       "brand": "HP",
@@ -83,6 +99,44 @@
         "processor": "Intel Core i7"
       },
       "image": "https://m.media-amazon.com/images/I/41kYmPglzrL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "150c",
+      "name": "Iphone 12",
+      "brand": "Apple",
+      "price": "600",
+      "screenSize": "6.2 inches",
+      "storage": "128 GB",
+      "camera": "15 MB",
+      "battery": "2880 ",
+      "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
+      "category": "Mobile",
+      "specs": {
+        "screenSize": "6.2 inches",
+        "storage": "128 GB",
+        "camera": "15 MB",
+        "battery": "2880 "
+      }
+    },
+    {
+      "id": "0ebb",
+      "name": "ASUS D515",
+      "brand": "ASUS",
+      "price": "1500",
+      "screenSize": "15.6 inch",
+      "storage": "1 TB HDD / 256GB SSD",
+      "camera": "",
+      "battery": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aU7Zi6NOzWHMgNKnQGzEioOc_uLqjzamsg&s.png",
+      "category": "Laptop",
+      "ram": " 16 GB",
+      "processor": "AMD® Core™ i7",
+      "specs": {
+        "screenSize": "15.6 inch",
+        "storage": "1 TB HDD / 256GB SSD",
+        "ram": " 16 GB",
+        "processor": "AMD® Core™ i7"
+      }
     }
   ]
 }

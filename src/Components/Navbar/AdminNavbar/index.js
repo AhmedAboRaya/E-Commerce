@@ -10,6 +10,10 @@ const Navbar = () => {
         <div className="mt-1">
             <Link className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/admin">Products</Link>
             <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/admin/messages">User Messages</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/admin/addproduct">Add Product</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/admin/addadmin">Add Admin</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/admin/admins">Accounts</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/">Log Out</NavLink>
         </div>
       </nav>
     </>

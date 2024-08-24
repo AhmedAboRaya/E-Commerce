@@ -13,6 +13,7 @@ const Navbar = () => {
             <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/products">Products</NavLink>
             <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/contact">Contact</NavLink>
             <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/lab16">Lab16</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/">Log Out</NavLink>
         </div>
       </nav>
     </>
