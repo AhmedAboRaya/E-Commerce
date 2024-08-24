@@ -1,89 +1,88 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "category": "Mobile",
-        "name": "iPhone 14 Pro",
-        "brand": "Apple",
-        "price": 999,
-        "specs": {
-          "screenSize": "6.1 inches",
-          "storage": "128GB",
-          "camera": "12MP",
-          "battery": "3095mAh"
-        },
-        "image": "https://btech.com/media/catalog/product/a/p/apple-iphone-14-pro-max-6gb-256gb-silver.jpg?width=660&store=en&image-type=image.png"
+  "products": [
+    {
+      "id": 1,
+      "category": "Mobile",
+      "name": "iPhone 14 Pro",
+      "brand": "Apple",
+      "price": 999,
+      "specs": {
+        "screenSize": "6.1 inches",
+        "storage": "128GB",
+        "camera": "12MP",
+        "battery": "3095mAh"
       },
-      {
-        "id": 2,
-        "category": "Mobile",
-        "name": "Samsung Galaxy S23",
-        "brand": "Samsung",
-        "price": 899,
-        "specs": {
-          "screenSize": "6.2 inches",
-          "storage": "256GB",
-          "camera": "50MP",
-          "battery": "3700mAh"
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png"
+      "image": "https://btech.com/media/catalog/product/a/p/apple-iphone-14-pro-max-6gb-256gb-silver.jpg?width=660&store=en&image-type=image.png"
+    },
+    {
+      "id": 2,
+      "category": "Mobile",
+      "name": "Samsung Galaxy S23",
+      "brand": "Samsung",
+      "price": 899,
+      "specs": {
+        "screenSize": "6.2 inches",
+        "storage": "256GB",
+        "camera": "50MP",
+        "battery": "3700mAh"
       },
-      {
-        "id": 3,
-        "category": "Mobile",
-        "name": "Google Pixel 7",
-        "brand": "Google",
-        "price": 799,
-        "specs": {
-          "screenSize": "6.3 inches",
-          "storage": "128GB",
-          "camera": "50MP",
-          "battery": "4355mAh"
-        },
-        "image": "https://m.media-amazon.com/images/I/7173p0j-mbL.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png"
+    },
+    {
+      "id": 3,
+      "category": "Mobile",
+      "name": "Google Pixel 7",
+      "brand": "Google",
+      "price": 799,
+      "specs": {
+        "screenSize": "6.3 inches",
+        "storage": "128GB",
+        "camera": "50MP",
+        "battery": "4355mAh"
       },
-      {
-        "id": 4,
-        "category": "Laptop",
-        "name": "MacBook Air M2",
-        "brand": "Apple",
-        "price": 1199,
-        "specs": {
-          "screenSize": "13.6 inches",
-          "ram": "8GB",
-          "storage": "256GB SSD",
-          "processor": "Apple M2"
-        },
-        "image": "https://smartkoshk.com/cdn/shop/files/MacBook-Air-M2-Egypt-5.png?v=1697885818&width=1946.png"
+      "image": "https://m.media-amazon.com/images/I/7173p0j-mbL.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Laptop",
+      "name": "MacBook Air M2",
+      "brand": "Apple",
+      "price": 1199,
+      "specs": {
+        "screenSize": "13.6 inches",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "processor": "Apple M2"
       },
-      {
-        "id": 5,
-        "category": "Laptop",
-        "name": "Dell XPS 13",
-        "brand": "Dell",
-        "price": 999,
-        "specs": {
-          "screenSize": "13.4 inches",
-          "ram": "16GB",
-          "storage": "512GB SSD",
-          "processor": "Intel Core i7"
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKb1WjsGrjvywGOytnLSKC5gjrfiPiwS2BA&s.png"
+      "image": "https://smartkoshk.com/cdn/shop/files/MacBook-Air-M2-Egypt-5.png?v=1697885818&width=1946.png"
+    },
+    {
+      "id": 5,
+      "category": "Laptop",
+      "name": "Dell XPS 13",
+      "brand": "Dell",
+      "price": 999,
+      "specs": {
+        "screenSize": "13.4 inches",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "processor": "Intel Core i7"
       },
-      {
-        "id": 6,
-        "category": "Laptop",
-        "name": "HP Spectre x360",
-        "brand": "HP",
-        "price": 1099,
-        "specs": {
-          "screenSize": "13.3 inches",
-          "ram": "16GB",
-          "storage": "512GB SSD",
-          "processor": "Intel Core i7"
-        },
-        "image": "https://m.media-amazon.com/images/I/41kYmPglzrL._AC_UF894,1000_QL80_.jpg"
-      }
-    ]
-  }
-  
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKb1WjsGrjvywGOytnLSKC5gjrfiPiwS2BA&s.png"
+    },
+    {
+      "id": 6,
+      "category": "Laptop",
+      "name": "HP Spectre x360",
+      "brand": "HP",
+      "price": 1099,
+      "specs": {
+        "screenSize": "13.3 inches",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "processor": "Intel Core i7"
+      },
+      "image": "https://m.media-amazon.com/images/I/41kYmPglzrL._AC_UF894,1000_QL80_.jpg"
+    }
+  ]
+}

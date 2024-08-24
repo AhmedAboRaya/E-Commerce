@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import '../../App.css'
 const Navbar = () => {
   return (
@@ -9,9 +9,10 @@ const Navbar = () => {
         </div>
 
         <div className="mt-1">
-            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/">Home</NavLink>
-            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/products">Products</NavLink>
-            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/lab16">Lab16</NavLink>
+            <Link className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user">Home</Link>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/products">Products</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/contact">Contact</NavLink>
+            <NavLink className="mr-9 text-[#cb0c6b] no-underline text-lg font-semibold hover:text-[#39021d] duration-500" to="/user/lab16">Lab16</NavLink>
         </div>
       </nav>
     </>

@@ -1,7 +1,8 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
-import MyDialog from "../Modal";
+import DeleteModal from "./Modal/Confirmation";
+import EditModal from "./Modal/EditDialog";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const Shop = () => {
           setIsLoading(false);
         }, 1000);
       });
-  }, []);
+  },[]);
 
   function closeModal() {
     setIsOpen(false)
@@ -35,6 +36,16 @@ const Shop = () => {
   function openModal(product) {
     setIsOpen(true);
     setSelectedProduct(product);
+  }
+
+  const handleDeleteProduct = (id)=> {
+  //   fetch(`http://localhost:8000/products/${id}`, {
+  //     method: 'DELETE',
+  //   })
+  //  .then(response => response.json());
+    setProducts(products.filter(product => product.id!== id));
+    console.log(id);
+    closeModal();
   }
 
   const mobileProducts = products.filter(
@@ -62,7 +73,8 @@ const Shop = () => {
                 price={product.price}
                 brand={product.brand}
                 image={product.image}
-                onClick={() => openModal(product)}
+                confirmation={() => openModal(product)}
+                editDialog={() => openModal(product)}
               />
             ))
             }
@@ -78,13 +90,14 @@ const Shop = () => {
                 price={product.price}
                 brand={product.brand}
                 image={product.image}
-                onClick={() => openModal(product)}
+                confirmation={() => openModal(product)}
+                editDialog={() => openModal(product)}
               />
             ))}
           </div>
         </div>
       )}
-      <MyDialog closeModal={closeModal} openModal={openModal} isOpen={isOpen} selectedProduct={selectedProduct}/>
+      <DeleteModal closeModal={closeModal} openModal={openModal} isOpen={isOpen} selectedProduct={selectedProduct} deleteProduct={handleDeleteProduct}/>
       
     </>
   );

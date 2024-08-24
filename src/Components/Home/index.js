@@ -22,16 +22,16 @@ const Home = () => {
           <Spinner animation="border" style={{ color: "#e274a9" }} />
         </div>
       ) : (
-        <div className="flex flex-row flex-wrap px-10 py-10">
-          <div>
+        <div className="flex flex-row flex-wrap px-10 py-10 items-center justify-center">
+          <div className="md:w-[50%]">
             <img src={homeImage} alt="Home" />
           </div>
-          <div className="flex items-center flex-col justify-center">
+          <div className="flex items-center flex-col justify-center text-center">
             <h1 className="font-sans text-[#e274a9]">Easy Shopping</h1>
             <p className="font-sans text-[#2f2e43] text-lg font-semibold">
               Welcome to our online store! Shop your favorite items here.
             </p>
-            <NavLink to="/products">
+            <NavLink to="/user/products">
               <Button
                 txt={"Shop Now"}
                 style={
