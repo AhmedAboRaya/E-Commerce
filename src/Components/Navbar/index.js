@@ -5,7 +5,7 @@ import '../../App.css';
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg" className="border-2 border-[#e274a9] rounded-xl mb-4 mt-4 container px-3">
+    <Navbar bg="light" expand="lg" className="border-2 border-[#e274a9] rounded-xl mb-4 mt-4 container px-3 fixed" >
       <Navbar.Brand as={Link} to="/" className="text-2xl font-bold text-[#e274a9] me-auto">
         Shop Now
       </Navbar.Brand>

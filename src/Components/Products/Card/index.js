@@ -1,9 +1,9 @@
 import Button from "./Button";
 
-const Card = ({ brand, name, price, image, onClick }) => {
+const Card = ({ id, brand, name, price, image, onClick, handleAddToCart, handleBuyNow }) => {
   return (
     <div className="flex flex-col p-4 w-[300px] rounded-lg shadow-lg m-3 border border-[#e274a9] cursor-pointer transition-transform transform hover:scale-105">
-      <div onClick={() => onClick()} className="h-full">
+      <div onClick={onClick} className="h-full">
         <img
           src={image}
           alt={`${name} image`}
@@ -24,6 +24,7 @@ const Card = ({ brand, name, price, image, onClick }) => {
           style={
             "w-full bg-[#e274a9] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#e274a9] border-2 border-[#e274a9] rounded-md transition-colors duration-300 font-semibold"
           }
+          onClick={() => handleBuyNow(id)}
         />
 
         <Button
@@ -31,6 +32,7 @@ const Card = ({ brand, name, price, image, onClick }) => {
           style={
             "w-full bg-[#ffffff] text-[#e274a9] hover:bg-[#e274a9] hover:text-[#ffffff] border-2 border-[#e274a9] rounded-md transition-colors duration-300 font-semibold"
           }
+          onClick={() => handleAddToCart(id)}
         />
       </div>
     </div>

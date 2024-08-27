@@ -1,8 +1,10 @@
-
-const Button = ({style, txt}) => {
+const Button = ({ style, txt, onClick, id }) => {
     return (
-        <button className={`${style}`}>{txt}</button>
-    )
-}
-
-export default Button
+      <button className={`${style}`} onClick={() => onClick(id)}>
+        {txt}
+      </button>
+    );
+  };
+  
+  export default Button;
+  

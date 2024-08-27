@@ -7,6 +7,8 @@ export default function MyModal({
   closeModal,
   isOpen,
   selectedProduct,
+  handleAddToCart,
+  handleBuyNow,
 }) {
   return (
     <>
@@ -75,6 +77,7 @@ export default function MyModal({
                           style={
                             "w-full bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold"
                           }
+                          onClick={() => handleBuyNow(selectedProduct.id)}
                         />
 
                         <Button
@@ -82,6 +85,7 @@ export default function MyModal({
                           style={
                             "w-full bg-[#ffffff] text-[#e274a9] hover:text-[#ffffff] hover:bg-[#e274a9] border-2 border-[#e274a9] rounded-md duration-500 font-semibold"
                           }
+                          onClick={() => handleAddToCart(selectedProduct.id)}
                         />
                       </div>
                     </div>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';  // Make sure to import Bootstrap
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg" className="border-2 border-[#e274a9] rounded-xl mb-4 mt-4 container px-3">
+    <Navbar bg="light" expand="lg" className="border-2 border-[#e274a9] rounded-xl mb-4 mt-4 container px-3 fixed">
       <Navbar.Brand as={Link} to="/" className="text-2xl font-bold text-[#e274a9]">
         Shop Now
       </Navbar.Brand>

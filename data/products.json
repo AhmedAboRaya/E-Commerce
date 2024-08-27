@@ -121,21 +121,21 @@
       }
     },
     {
-      "id": "0d78",
+      "id": "01f7",
       "name": "Iphone 12",
-      "brand": "Apple",
+      "brand": "HP",
       "price": "600",
       "screenSize": "6.2 inches",
       "storage": "128 GB",
-      "camera": "15 MB",
-      "battery": "2880 ",
+      "camera": " 32 GB",
+      "battery": "AMD® Core™ i7",
       "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
       "category": "Mobile",
       "specs": {
         "screenSize": "6.2 inches",
         "storage": "128 GB",
-        "camera": "15 MB",
-        "battery": "2880 "
+        "camera": " 32 GB",
+        "battery": "AMD® Core™ i7"
       }
     }
   ]

@@ -2,12 +2,14 @@ import Card from "./Card";
 import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import MyDialog from "../Modal";
+import { useNavigate } from "react-router";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:8000/products")
@@ -33,6 +35,18 @@ const Shop = () => {
   function openModal(product) {
     setIsOpen(true);
     setSelectedProduct(product);
+  }
+
+  const handleAddToCart = (id) => {
+    console.log("Adding product to cart");
+    console.log(id);
+    // navigate("/user/buynow");
+  };
+
+  const handleBuyNow = (id) => {
+    console.log("Redirecting to checkout");
+    console.log(id); 
+    // navigate(`/user/checkout/${id}`);
   }
 
   const mobileProducts = products.filter(
@@ -61,7 +75,8 @@ const Shop = () => {
                 brand={product.brand}
                 image={product.image}
                 onClick={() => openModal(product)}
-                className="transition-transform transform hover:scale-105 animate-fadeIn"
+                handleAddToCart={handleAddToCart}
+                handleBuyNow={handleBuyNow}
               />
             ))}
           </div>
@@ -76,13 +91,14 @@ const Shop = () => {
                 brand={product.brand}
                 image={product.image}
                 onClick={() => openModal(product)}
-                className="transition-transform transform hover:scale-105 animate-fadeIn"
+                handleAddToCart={handleAddToCart}
+                handleBuyNow={handleBuyNow}
               />
             ))}
           </div>
         </div>
       )}
-      <MyDialog closeModal={closeModal} openModal={openModal} isOpen={isOpen} selectedProduct={selectedProduct} />
+      <MyDialog closeModal={closeModal} openModal={openModal} isOpen={isOpen} selectedProduct={selectedProduct} handleAddToCart={handleAddToCart} handleBuyNow={handleBuyNow}/>
     </>
   );
 };

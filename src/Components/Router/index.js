@@ -8,7 +8,7 @@ import Home from "../Home";
 import Lab16 from "../Lab16";
 import Products from "../Products";
 import Contact from "../Contact";
-import MainComponent from "../Main";
+// import MainComponent from "../Main";
 import Login from "../Login";
 import UserLayout from "../Layout/UserLayout";
 import AdminLayout from "../Layout/AdminLayout";
@@ -18,7 +18,7 @@ import AddProduct from "../AddProduct";
 import AddAdmin from "../AddAdmin";
 import Accounts from "../Accounts";
 import SignUp from "../SingUp";
-
+import BuyNow from "../BuyNow";
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -31,6 +31,7 @@ const Router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="buynow" element={<BuyNow />} />
         <Route path="lab16" element={<Lab16 />} />
       </Route>
 
@@ -55,9 +56,3 @@ function Layout() {
 
 export default Router;
 
-// <Route path="/" element={<Layout />}>
-//   <Route index element={<Home />} />
-//   <Route path="lab16" element={<Lab16 />} />
-//   <Route path="products" element={<Products />} />
-//   <Route path="contact" element={<Contact />} />
-// </Route>
