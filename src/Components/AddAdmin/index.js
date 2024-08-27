@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const AddAdmin = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,7 @@ const AddAdmin = () => {
     lname: "",
     email: "",
     pass: "",
-    role: "admin", 
+    role: "admin",
   });
 
   const [loading, setLoading] = useState(false);
@@ -32,13 +33,12 @@ const AddAdmin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true); // Show spinner
+    setLoading(true);
 
-    // Add admin data
     addAdmin(formData);
 
     setTimeout(() => {
-      setLoading(false); // Hide spinner after 1 second
+      setLoading(false);
       setFormData({
         fname: "",
         lname: "",
@@ -46,11 +46,15 @@ const AddAdmin = () => {
         pass: "",
         role: "admin",
       });
+      toast.success("Admin added", { duration: 2000 });
     }, 1000);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4">
+    <form onSubmit={handleSubmit} className="p-4 animate-fadeIn">
+      <div>
+        <Toaster />
+      </div>
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2">
           First Name

@@ -23,7 +23,7 @@ const UserMessage = () => {
   }, []);
 
   return (
-  <div className="flex flex-col items-center space-y-5">
+  <div className="flex flex-col items-center space-y-5 animate-fadeIn">
   {isLoading ? <Spinner animation="border" style={{ color: "#e274a9" }} /> : (
     messages.map((msg) => (
       <div key={msg.id} className="text-center border-2 shadow-md w-[50%] rounded-md border-[#e4b0c9] hover:shadow-xl duration-500">

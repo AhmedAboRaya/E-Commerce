@@ -26,7 +26,7 @@ const Accounts = () => {
   const filteredUsers = users.filter(user => user.role === filter);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 max-w-4xl mx-auto animate-fadeIn">
       <h1 className="text-3xl font-bold text-center mb-6 text-[#cb0c6b]">Accounts List</h1>
       <div className="flex justify-center mb-6">
         <select

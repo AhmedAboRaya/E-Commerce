@@ -49,14 +49,6 @@
       "role": "admin"
     },
     {
-      "id": "fece",
-      "fname": "Ahmed",
-      "lname": "Mahmoud",
-      "email": "ahmedaboraya399@gmail.com",
-      "pass": "123",
-      "role": "admin"
-    },
-    {
       "id": "89c7",
       "fname": "new",
       "lname": "Admin",
@@ -71,6 +63,14 @@
       "email": "rania@ex.com",
       "pass": "123",
       "role": "admin"
+    },
+    {
+      "id": "f3bd",
+      "fname": "Ahmed",
+      "lname": "Mahmoud",
+      "email": "ahmedaboraya399@gmail.com",
+      "pass": "111",
+      "role": "user"
     }
   ]
 }

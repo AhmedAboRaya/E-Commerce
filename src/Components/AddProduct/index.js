@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const AddProduct = () => {
   const [formData, setFormData] = useState({
@@ -59,10 +59,14 @@ const AddProduct = () => {
       image: "",
       category: "Mobile",
     });
+    toast.success("Added", { duration: 2000 });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4">
+    <form onSubmit={handleSubmit} className="p-4 animate-fadeIn">
+      <div>
+        <Toaster />
+      </div>
       {/* Category */}
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2">

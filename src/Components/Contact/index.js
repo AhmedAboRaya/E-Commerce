@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
-import Button from "../Products/Card/Button"; // Assuming you have a Button component
+import Button from "../Products/Card/Button";
+import toast, { Toaster } from "react-hot-toast";
 
-const Contact = ({}) => {
+const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +31,7 @@ const Contact = ({}) => {
 
       if (response.ok) {
         setFormData({ name: "", email: "", message: "" });
+        toast.success("Message Sent", { duration: 2000 });
       } else {
         alert("Error sending message");
       }
@@ -44,11 +46,16 @@ const Contact = ({}) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-10">
-      <h1 className="text-3xl font-bold text-[#e274a9] mb-6">Contact Us</h1>
+    <div className="flex flex-col items-center justify-center p-10 animate-fadeIn">
+      <div>
+        <Toaster />
+      </div>
+      <h1 className="text-3xl font-bold text-[#e274a9] mb-6 animate-fadeIn">
+        Contact Us
+      </h1>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md space-y-4 bg-white p-6 rounded-lg shadow-md"
+        className="w-full max-w-md space-y-4 bg-white p-6 rounded-lg shadow-md animate-fadeIn"
       >
         <div className="space-y-2">
           <label
@@ -63,7 +70,7 @@ const Contact = ({}) => {
             type="text"
             value={formData.name}
             onChange={handleChange}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm transition duration-300 ease-in-out transform hover:scale-105"
             required
           />
         </div>
@@ -80,7 +87,7 @@ const Contact = ({}) => {
             type="email"
             value={formData.email}
             onChange={handleChange}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm transition duration-300 ease-in-out transform hover:scale-105"
             required
           />
         </div>
@@ -97,7 +104,7 @@ const Contact = ({}) => {
             value={formData.message}
             onChange={handleChange}
             rows="4"
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#e274a9] focus:border-[#e274a9] sm:text-sm transition duration-300 ease-in-out transform hover:scale-105"
             required
           />
         </div>
@@ -112,7 +119,7 @@ const Contact = ({}) => {
               )
             }
             style={
-              "bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold px-4 py-2"
+              "bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold px-4 py-2 transition-transform transform hover:scale-105"
             }
           />
         </div>

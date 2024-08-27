@@ -101,24 +101,6 @@
       "image": "https://m.media-amazon.com/images/I/41kYmPglzrL._AC_UF894,1000_QL80_.jpg"
     },
     {
-      "id": "150c",
-      "name": "Iphone 12",
-      "brand": "Apple",
-      "price": "600",
-      "screenSize": "6.2 inches",
-      "storage": "128 GB",
-      "camera": "15 MB",
-      "battery": "2880 ",
-      "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
-      "category": "Mobile",
-      "specs": {
-        "screenSize": "6.2 inches",
-        "storage": "128 GB",
-        "camera": "15 MB",
-        "battery": "2880 "
-      }
-    },
-    {
       "id": "0ebb",
       "name": "ASUS D515",
       "brand": "ASUS",
@@ -136,6 +118,24 @@
         "storage": "1 TB HDD / 256GB SSD",
         "ram": " 16 GB",
         "processor": "AMD® Core™ i7"
+      }
+    },
+    {
+      "id": "5d74",
+      "name": "Iphone 12",
+      "brand": "Apple",
+      "price": "600",
+      "screenSize": "6.2 inches",
+      "storage": "128 GB",
+      "camera": "15 MB",
+      "battery": "2880 ",
+      "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
+      "category": "Mobile",
+      "specs": {
+        "screenSize": "6.2 inches",
+        "storage": "128 GB",
+        "camera": "15 MB",
+        "battery": "2880 "
       }
     }
   ]
