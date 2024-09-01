@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
-import Button from "../Products/Card/Button";
 import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
@@ -9,7 +8,13 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    date: "",
   });
+
+  const getCurrentDateTime = () => {
+    const now = new Date();
+    return now.toLocaleString();
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,17 +25,19 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const formDataWithDate = { ...formData, date: getCurrentDateTime() };
+
     try {
       const response = await fetch("http://localhost:5000/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithDate),
       });
 
       if (response.ok) {
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "", date: "" });
         toast.success("Message Sent", { duration: 2000 });
       } else {
         alert("Error sending message");
@@ -109,19 +116,18 @@ const Contact = () => {
           />
         </div>
         <div className="flex justify-center">
-          <Button
+          <button
             type="submit"
-            txt={
-              isSubmitting ? (
-                <Spinner animation="border" style={{ color: "#e274a9" }} />
-              ) : (
-                "Send"
-              )
-            }
-            style={
+            className={
               "bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold px-4 py-2 transition-transform transform hover:scale-105"
             }
-          />
+          >
+            {isSubmitting ? (
+              <Spinner animation="border" style={{ color: "#e274a9" }} />
+            ) : (
+              "Send"
+            )}
+          </button>
         </div>
       </form>
     </div>

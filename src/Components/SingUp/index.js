@@ -50,6 +50,12 @@ const SignUp = () => {
       return;
     }
 
+    if (pass.length < 8) {
+      setError("Password must be at least 8 characters");
+      setLoading(false);
+      return;
+    }
+
     if (email.trim() === "") {
       setError("Email cannot be empty");
       setLoading(false);
@@ -94,6 +100,8 @@ const SignUp = () => {
       if (!response.ok) {
         throw new Error("Failed to sign up");
       }
+
+      
 
       navigate("/");
     } finally {

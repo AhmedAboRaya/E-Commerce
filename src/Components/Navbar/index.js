@@ -1,9 +1,21 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../App.css';
 
 const NavbarComponent = () => {
+
+    const navigate = useNavigate();
+  
+    const handleLogout = () => {
+      navigate("/", { replace: true });
+      window.history.pushState(null, null, "/");
+      window.onpopstate = function() {
+        navigate("/", { replace: true });
+      };
+    };
+  
+
   return (
     <Navbar bg="light" expand="lg" className="border-2 border-[#e274a9] rounded-xl mb-4 mt-4 container px-3 fixed" >
       <Navbar.Brand as={Link} to="/" className="text-2xl font-bold text-[#e274a9] me-auto">
@@ -24,7 +36,7 @@ const NavbarComponent = () => {
           <NavLink as={NavLink} to="/user/lab16" className="text-[#cb0c6b] font-semibold hover:text-[#39021d] duration-500 no-underline">
             Lab16
           </NavLink>
-          <NavLink as={NavLink} to="/" className="text-[#cb0c6b] font-semibold hover:text-[#39021d] duration-500 no-underline">
+          <NavLink as={NavLink} to="/" className="text-[#cb0c6b] font-semibold hover:text-[#39021d] duration-500 no-underline" onClick={handleLogout}>
             Log Out
           </NavLink>
         </Nav>

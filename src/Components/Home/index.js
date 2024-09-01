@@ -1,12 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import homeImage from "../../Assets/Images/home.png";
 import Button from "../Products/Card/Button";
 import { Spinner } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import '../../App.css'
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,6 +17,10 @@ const Home = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleClick = () => {
+    navigate("/user/products");
+  };
 
   return (
     <div className="relative">
@@ -44,6 +50,7 @@ const Home = () => {
                 style={
                   "bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md transition-transform duration-300 transform hover:scale-105 px-4 py-2 font-semibold"
                 }
+                onClick={handleClick}
               />
             </NavLink>
           </div>

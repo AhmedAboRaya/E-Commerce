@@ -1,76 +1,11 @@
 {
   "messages": [
     {
-      "id": "ade9",
-      "name": "Ahmed",
-      "email": "Ahmed@gmail.com",
-      "message": "hello1\n"
-    },
-    {
-      "id": "da8b",
-      "name": "Mahmoud",
-      "email": "Mahmud@yahoo.com",
-      "message": "Welcome"
-    },
-    {
-      "id": "56fd",
-      "name": "Heba",
-      "email": "heba@gmail.com",
-      "message": "ciao"
-    },
-    {
-      "id": "787b",
-      "name": "nourhan",
-      "email": "nnnd@gmail.com",
-      "message": "hi"
-    },
-    {
-      "id": "e413",
-      "name": "Youssef",
-      "email": "goo@gmail.com",
-      "message": "hello "
-    },
-    {
-      "id": "f4db",
-      "name": "Youssef",
-      "email": "goo@gmail.com",
-      "message": "d"
-    },
-    {
-      "id": "43b4",
-      "name": "hani",
-      "email": "hani@yahoo.com",
-      "message": "nice project"
-    },
-    {
-      "id": "4629",
-      "name": "Rania",
-      "email": "rania@ex.com",
-      "message": "Hello"
-    },
-    {
-      "id": "6906",
-      "name": "a",
-      "email": "ahmedaboraya399@gmail.com",
-      "message": "d"
-    },
-    {
-      "id": "4aa6",
-      "name": "a",
-      "email": "ahmedaboraya399@gmail.com",
-      "message": "sdsdsdsd"
-    },
-    {
-      "id": "5a00",
+      "id": "d65c",
       "name": "Ahmed Mahmoud Mohamed Mahmoud",
       "email": "ahmedaboraya399@gmail.com",
-      "message": "a"
-    },
-    {
-      "id": "0e3d",
-      "name": "Ahmed Mahmoud Mohamed Mahmoud",
-      "email": "ahmedaboraya399@gmail.com",
-      "message": "hello "
+      "message": "hello",
+      "date": "9/1/2024, 3:34:38 PM"
     }
   ]
 }
