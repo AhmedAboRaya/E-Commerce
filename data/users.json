@@ -6,7 +6,8 @@
       "lname": "AboRaya",
       "email": "ahmed.user@example.com",
       "pass": "user123",
-      "role": "user"
+      "role": "user",
+      "cart": "3,1,2"
     },
     {
       "id": "2",
@@ -22,7 +23,8 @@
       "lname": "Ali",
       "email": "mohamed.user@example.com",
       "pass": "user456",
-      "role": "user"
+      "role": "user",
+      "cart": "4,6,3,2,1"
     },
     {
       "id": "4",

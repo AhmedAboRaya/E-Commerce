@@ -18,6 +18,7 @@ import AddProduct from "../AddProduct";
 import AddAdmin from "../AddAdmin";
 import Accounts from "../Accounts";
 import SignUp from "../SingUp";
+import Cart from "../Cart";
 import BuyNow from "../BuyNow";
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,7 @@ const Router = createBrowserRouter(
         <Route path="products" element={<Products />} />
         <Route path="contact" element={<Contact />} />
         <Route path="buynow" element={<BuyNow />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="lab16" element={<Lab16 />} />
       </Route>
 

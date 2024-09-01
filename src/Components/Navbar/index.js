@@ -13,6 +13,7 @@ const NavbarComponent = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
+      localStorage.removeItem("email");
       navigate("/", { replace: true });
       window.history.pushState(null, null, "/");
       window.onpopstate = () => {

@@ -27,21 +27,22 @@ const Login = () => {
       });
   }, []);
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const user = users.find((u) => u.email === email && u.pass === password);
-    if (user) {
-      setUserRole(user.role);
-      navigate(user.role === "admin" ? "/admin" : "/user");
-      setIsPasswordTrue(true);
-      setLoading(false);
-    } else {
-      console.log("false", user);
-      setIsPasswordTrue(false);
-      setLoading(false);
-    }
-  };
+const handleLogin = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  const user = users.find((u) => u.email === email && u.pass === password);
+  if (user) {
+    setUserRole(user.role);
+    setIsPasswordTrue(true);
+    console.log("Saving email to localStorage:", email);
+    localStorage.setItem("email", email);
+    navigate(user.role === "admin" ? "/admin" : "/user");
+  } else {
+    console.log("Invalid login credentials"); // Debug log
+    setIsPasswordTrue(false);
+  }
+  setLoading(false);
+};
 
   useEffect(() => {
     console.log(userRole);
@@ -112,7 +113,6 @@ const Login = () => {
           {!isPasswordTrue && (
             <p className="text-red-500 text-center">Email or Password wrong</p>
           )}
-
           <button
             type="submit"
             className="w-full py-2 text-white bg-pink-500 rounded hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 flex justify-center items-center"
