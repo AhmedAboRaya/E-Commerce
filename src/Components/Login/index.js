@@ -20,7 +20,6 @@ const Login = () => {
       .then((data) => {
         setUsers(data);
         setLoading(false);
-        console.log(data);
       })
       .catch((err) => {
         setError(err.message);
@@ -37,7 +36,6 @@ const Login = () => {
       navigate(user.role === "admin" ? "/admin" : "/user");
       setIsPasswordTrue(true);
       setLoading(false);
-      console.log("true", user);
     } else {
       console.log("false", user);
       setIsPasswordTrue(false);
