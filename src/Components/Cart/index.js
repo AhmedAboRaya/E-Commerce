@@ -7,16 +7,18 @@ const Cart = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/products")
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setIsLoading(false);
-      });
+    setTimeout(() => {
+      fetch("http://localhost:8000/products")
+        .then((response) => response.json())
+        .then((data) => {
+          setProducts(data);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching products:", error);
+          setIsLoading(false);
+        });
+    }, 1000);
   }, []);
 
   const getLoggedInUserEmail = () => {
@@ -49,8 +51,8 @@ const Cart = () => {
       );
       console.log(productsInCart);
       
-    } catch (error) {
-      console.error("Error adding item to cart:", error);
+    } catch {
+      console.error("Error adding item to cart");
     }
   };
 
@@ -62,14 +64,26 @@ const Cart = () => {
         </div>
       ) : (
         <div>
-          <h1 onClick={handleAddToCart} className="text-[#e274a9] text-center mt-4 animate-fadeIn">
+          <h1
+            onClick={handleAddToCart}
+            className="text-[#e274a9] text-center mt-4 animate-fadeIn"
+          >
             Shopping Cart
           </h1>
-          <div>
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
+          >
             {products.map((product) => (
-              <div key={product.id}>
-                <CartProduct title={product.name} id={product.id} brand={product.brand} price={product.price} battery={product.specs.battery} camera={product.specs.camera} image={product.image}/>
-              </div>
+              <CartProduct
+                key={product.id}
+                title={product.name}
+                id={product.id}
+                brand={product.brand}
+                price={product.price}
+                battery={product.specs.battery}
+                camera={product.specs.camera}
+                image={product.image}
+              />
             ))}
           </div>
         </div>
