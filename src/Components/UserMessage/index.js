@@ -8,9 +8,8 @@ const UserMessage = () => {
   const [messages, setMessages] = useState([]);
 
   const handleDeleteMsg = (id) => {
-    // Show confirmation dialog
     const isConfirmed = window.confirm("Are you sure you want to delete this message?");
-    if (!isConfirmed) return; // Exit if user cancels
+    if (!isConfirmed) return; 
 
     fetch(`http://localhost:5000/messages/${id}`, {
       method: "DELETE",

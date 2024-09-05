@@ -122,7 +122,7 @@ const AddAdmin = () => {
       <button
         type="submit"
         className="bg-[#e274a9] text-white py-2 px-4 rounded hover:bg-[#c25888]"
-        disabled={loading} // Disable button while loading
+        disabled={loading} 
       >
         {loading ? (
           <div

@@ -93,7 +93,7 @@ const AdminPurchases = () => {
                   <th className="p-4 border-b text-pink-500">Mobile</th>
                   <th className="p-4 border-b text-pink-500">Payment Method</th>
                   <th className="p-4 border-b text-pink-500">Status</th>
-                  <th className="p-4 border-b text-pink-500">Date</th> {/* Added Date column */}
+                  <th className="p-4 border-b text-pink-500">Date</th> 
                   <th className="p-4 border-b text-pink-500">Action</th>
                 </tr>
               </thead>

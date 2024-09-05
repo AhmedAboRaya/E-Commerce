@@ -64,8 +64,8 @@ const Checkout = () => {
           visaDetails,
         },
         product,
-        status: "pending", // Add status field
-        date: new Date().toISOString().split('T')[0], // Add current date
+        status: "pending", 
+        date: new Date().toISOString().split('T')[0], 
       };
 
       fetch("http://localhost:9000/checkout", {
@@ -81,11 +81,10 @@ const Checkout = () => {
           navigate("/user/purchases");
           alert("Checkout Successful!");
 
-          // Reset form and state
           setName("");
           setAddress("");
           setMobile("");
-          setEmail(userEmail); // Reset to initial value from local storage
+          setEmail(userEmail); 
           setPaymentMethod("cash");
           setVisaDetails({ cardNumber: "", expiryDate: "", cvv: "" });
         })

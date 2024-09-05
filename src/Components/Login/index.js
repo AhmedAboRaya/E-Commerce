@@ -38,7 +38,7 @@ const handleLogin = async (e) => {
     localStorage.setItem("email", email);
     navigate(user.role === "admin" ? "/admin" : "/user");
   } else {
-    console.log("Invalid login credentials"); // Debug log
+    console.log("Invalid login credentials"); 
     setIsPasswordTrue(false);
   }
   setLoading(false);

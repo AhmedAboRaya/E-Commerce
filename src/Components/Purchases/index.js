@@ -17,10 +17,9 @@ const Purchases = () => {
     fetch(`http://localhost:9000/checkout`)
       .then((response) => response.json())
       .then((data) => {
-        // Ensure that the date field exists and is formatted properly
         const updatedPurchases = data.map((purchase) => ({
           ...purchase,
-          date: purchase.date || new Date().toISOString().split('T')[0], // Fallback if no date exists
+          date: purchase.date || new Date().toISOString().split('T')[0], 
         }));
         setTimeout(() => {
           setPurchases(updatedPurchases);
@@ -65,7 +64,7 @@ const Purchases = () => {
                     <td className={`p-4 border-b ${statusColors[purchase.status] || "bg-gray-300 text-black"}`}>
                       {purchase.status}
                     </td>
-                    <td className="p-4 border-b">{purchase.date}</td> {/* Ensure this displays the date from JSON */}
+                    <td className="p-4 border-b">{purchase.date}</td> 
                   </tr>
                 ))}
               </tbody>

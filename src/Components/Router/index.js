@@ -5,10 +5,9 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from "../Home";
-import Lab16 from "../Lab16";
+// import Lab16 from "../Lab16";
 import Products from "../Products";
 import Contact from "../Contact";
-// import MainComponent from "../Main";
 import Login from "../Login";
 import UserLayout from "../Layout/UserLayout";
 import AdminLayout from "../Layout/AdminLayout";
