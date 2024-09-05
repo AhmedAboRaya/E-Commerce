@@ -27,10 +27,12 @@ This project is an E-Commerce System that allows users and admins to perform var
     ```bash
     git clone https://github.com/AhmedAboRaya/E-Commerce.git
     ```
+
 2. **Navigate to the project directory:**
     ```bash
     cd your-repository
     ```
+
 3. **Install dependencies:**
     ```bash
     npm install
@@ -68,6 +70,34 @@ This project is an E-Commerce System that allows users and admins to perform var
 - **GET /checkout**: Retrieve all checkout records.
 - **POST /checkout**: Create a new checkout record.
 - **GET /products/:id**: Retrieve product details by ID.
+- **DELETE /products/:id**: Delete a product by its ID.
+- **DELETE /users/:id**: Delete a user by their ID.
+- **DELETE /messages/:id**: Delete a message by its ID.
+
+## Tools, Libraries, and Languages Used
+
+- **Frontend**:
+  - **React**: For building the user interface and handling components.
+  - **Tailwind CSS**: For styling the application with utility-first CSS.
+  - **Bootstrap & React-Bootstrap**: For reusable UI components and responsive design.
+  - **Lucide-react**: For scalable icon integration.
+  - **React Hot Toast & React Toastify**: For displaying notifications.
+  - **React Router & React Router DOM**: For navigation and routing in the application.
+  - **Headless UI**: For accessible, unstyled UI components.
+  
+- **Backend**:
+  - **JSON Server**: For mocking API endpoints and serving JSON data.
+  - **JavaScript (ES6+)**: The primary programming language for logic and handling operations.
+
+- **State Management**:
+  - **useState and useEffect**: React hooks for managing component state and side effects.
+
+- **API Calls**:
+  - **Fetch API**: For making HTTP requests to the mock JSON server.
+
+- **Testing**:
+  - **Jest**: For unit testing React components.
+  - **React Testing Library**: For testing user interactions and component behavior.
 
 ## Usage
 
