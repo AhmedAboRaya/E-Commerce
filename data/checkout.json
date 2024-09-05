@@ -67,7 +67,7 @@
         },
         "image": "https://smartkoshk.com/cdn/shop/files/MacBook-Air-M2-Egypt-5.png?v=1697885818&width=1946.png"
       },
-      "status": "pending",
+      "status": "canceled",
       "date": "2024-09-05"
     },
     {
@@ -142,6 +142,74 @@
         "id": "2"
       },
       "status": "pending",
+      "date": "2024-09-05"
+    },
+    {
+      "id": "a73f",
+      "user": {
+        "name": "Ahmed AboRaya",
+        "address": "cairo",
+        "mobile": "01153782020",
+        "email": "ahmed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "id": "6",
+        "category": "Laptop",
+        "name": "HP Spectre x360",
+        "brand": "HP",
+        "price": 1099,
+        "specs": {
+          "screenSize": "13.3 inches",
+          "ram": "16GB",
+          "storage": "512GB SSD",
+          "processor": "Intel Core i7"
+        },
+        "image": "https://m.media-amazon.com/images/I/41kYmPglzrL._AC_UF894,1000_QL80_.jpg"
+      },
+      "status": "under delivery",
+      "date": "2024-09-05"
+    },
+    {
+      "id": "c641",
+      "user": {
+        "name": "Mohamed Ali",
+        "address": "Giza",
+        "mobile": "0131231122",
+        "email": "mohamed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "id": "0ebb",
+        "name": "ASUS D515",
+        "brand": "ASUS",
+        "price": "1500",
+        "screenSize": "15.6 inch",
+        "storage": "1 TB HDD / 256GB SSD",
+        "camera": "",
+        "battery": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aU7Zi6NOzWHMgNKnQGzEioOc_uLqjzamsg&s.png",
+        "category": "Laptop",
+        "ram": " 16 GB",
+        "processor": "AMD® Core™ i7",
+        "specs": {
+          "screenSize": "15.6 inch",
+          "storage": "1 TB HDD / 256GB SSD",
+          "ram": " 16 GB",
+          "processor": "AMD® Core™ i7"
+        }
+      },
+      "status": "canceled",
       "date": "2024-09-05"
     }
   ]
