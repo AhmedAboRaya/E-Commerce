@@ -1,56 +1,96 @@
-# Getting Started with Create React App
+# E-Commerce System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is an E-Commerce System that allows users and admins to perform various actions related to purchases, account management, and product management.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### User Features
+- **Checkout**: Users can complete the checkout process for products.
+- **Send Message to Admin**: Users can send messages to the admin.
+- **View Purchases**: Users can view their purchases and check the status of each purchase.
+- **Create Account**: Users can create an account to access the system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Admin Features
+- **Delete Product**: Admins can delete products from the system.
+- **Edit Product**: Admins can edit product details.
+- **Manage Messages**: Admins can view and delete user messages.
+- **Add Product**: Admins can add new products, including categorizing them as Mobile or Laptop.
+- **Create Admin Account**: Admins can create additional admin accounts.
+- **Manage Accounts**: Admins can view all accounts (both admin and user) and delete any account if necessary.
+- **View All Purchases**: Admins can see all purchases made and change the status of purchases. Admins can also filter purchases by status.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/your-repository.git
+    ```
+2. **Navigate to the project directory:**
+    ```bash
+    cd your-repository
+    ```
+3. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Run the project:**
+    - Start the local server:
+      ```bash
+      npm start
+      ```
 
-### `npm run build`
+5. **Run the JSON servers for API mockup:**
+    - For checkout data:
+      ```bash
+      npx json-server --watch data/checkout.json --port 9000
+      ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - For messages data:
+      ```bash
+      npx json-server --watch data/messages.json --port 5000
+      ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    - For products data:
+      ```bash
+      npx json-server --watch data/products.json --port 8000
+      ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    - For users data:
+      ```bash
+      npx json-server --watch data/users.json --port 7000
+      ```
 
-### `npm run eject`
+## API Endpoints
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **GET /checkout**: Retrieve all checkout records.
+- **POST /checkout**: Create a new checkout record.
+- **GET /products/:id**: Retrieve product details by ID.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **For Users**:
+  - Access the checkout page to complete purchases.
+  - Send messages to admins from the messaging section.
+  - View purchase history and check purchase statuses from the purchase history section.
+  - Create and manage your account from the account management page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **For Admins**:
+  - Manage products, including adding, editing, and deleting products.
+  - Manage user messages and delete them if necessary.
+  - Create and manage admin accounts.
+  - View and manage all accounts and purchases. Change the status of purchases and filter them as needed.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Please open an issue or submit a pull request if you'd like to contribute to the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-
+For any questions or suggestions, please contact me at [your-email@example.com](mailto:your-email@example.com).
