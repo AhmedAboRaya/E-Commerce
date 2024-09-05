@@ -33,14 +33,6 @@
       "email": "fatma.admin@example.com",
       "pass": "admin456",
       "role": "admin"
-    },
-    {
-      "id": "6",
-      "fname": "Laila",
-      "lname": "Saad",
-      "email": "laila.admin@example.com",
-      "pass": "admin789",
-      "role": "admin"
     }
   ]
 }

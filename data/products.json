@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "iPhone 14 Pro",
-      "price": "999",
+      "price": "800",
       "brand": "Apple",
       "screenSize": "6.6 inches",
       "storage": "128GB",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Samsung Galaxy ",
-      "price": "800",
+      "price": "900",
       "brand": "Samsung",
       "screenSize": "6.2 inches",
       "storage": "256GB",
@@ -121,42 +121,24 @@
       }
     },
     {
-      "id": "01f7",
-      "name": "Iphone 12",
-      "brand": "HP",
-      "price": "600",
-      "screenSize": "6.2 inches",
-      "storage": "128 GB",
-      "camera": " 32 GB",
-      "battery": "AMD® Core™ i7",
-      "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
-      "category": "Mobile",
-      "specs": {
-        "screenSize": "6.2 inches",
-        "storage": "128 GB",
-        "camera": " 32 GB",
-        "battery": "AMD® Core™ i7"
-      }
-    },
-    {
-      "id": "eb63",
-      "name": "ASUS D515",
-      "brand": "ASUS",
-      "price": "600",
-      "screenSize": "6.2 inches",
-      "storage": "128 GB",
+      "name": "Lenovo IdeaPad 1",
+      "price": "330.28",
+      "brand": "Lenovo ",
+      "screenSize": "15.6\"",
+      "storage": "256GB SSD",
+      "category": "Laptop",
       "camera": "",
       "battery": "",
-      "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
-      "category": "Laptop",
-      "ram": " 32 GB",
-      "processor": "AMD® Core™ i7",
+      "ram": "4GB ",
+      "processor": "Intel® Core™ i3-1215U",
+      "image": "https://dubaiphone.s3.eu-central-1.amazonaws.com/dp-prod/wp-content/uploads/2024/03/Lenovo-IdeaPad-1-82QD00AUED-i3-1215U-4GB-256GB-SSD-15.6-inch-HD-Windows-11_Lenovo-Laptop_9338_2.jpeg",
       "specs": {
-        "screenSize": "6.2 inches",
-        "storage": "128 GB",
-        "ram": " 32 GB",
-        "processor": "AMD® Core™ i7"
-      }
+        "screenSize": "15.6\"",
+        "ram": "4GB ",
+        "storage": "256GB SSD",
+        "processor": "Intel® Core™ i3-1215U"
+      },
+      "id": "2906"
     }
   ]
 }

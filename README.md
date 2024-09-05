@@ -64,6 +64,11 @@ This project is an E-Commerce System that allows users and admins to perform var
       ```bash
       npx json-server --watch data/users.json --port 7000
       ```
+    
+      - For install used dependencies:
+      ```bash
+      npm install bootstrap@^5.3.3 lucide-react@^0.428.0 react@^18.3.1 react-bootstrap@^2.10.4 react-dom@^18.3.1 react-hot-toast@^2.4.1 react-router@^6.26.1 react-router-dom@^6.26.1 react-scripts@5.0.1 react-toastify@^10.0.5 web-vitals@^2.1.4
+      ```
 
 ## API Endpoints
 

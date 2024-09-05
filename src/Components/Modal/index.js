@@ -73,20 +73,20 @@ export default function MyModal({
                       </h6>
                       <div className="flex flex-row space-x-2">
                         <Button
-                          txt={"Buy Now"}
+                          txt={"Purchase Now"}
                           style={
                             "w-full bg-[#e274a9] text-[#ffffff] hover:text-[#e274a9] hover:bg-[#ffffff] border-2 border-[#e274a9] rounded-md duration-500 font-semibold"
                           }
                           onClick={() => handleBuyNow(selectedProduct.id)}
                         />
-
+{/* 
                         <Button
                           txt={"Add to cart"}
                           style={
                             "w-full bg-[#ffffff] text-[#e274a9] hover:text-[#ffffff] hover:bg-[#e274a9] border-2 border-[#e274a9] rounded-md duration-500 font-semibold"
                           }
                           onClick={() => handleAddToCart(selectedProduct.id)}
-                        />
+                        /> */}
                       </div>
                     </div>
                   )}
