@@ -49,22 +49,6 @@
       "email": "laila.admin@example.com",
       "pass": "admin789",
       "role": "admin"
-    },
-    {
-      "id": "bb43",
-      "fname": "Ahmed",
-      "lname": "Mahmoud",
-      "email": "ahmedaboraya399@gmail.com",
-      "pass": "11111111",
-      "role": "user"
-    },
-    {
-      "id": "1941",
-      "fname": "Ahmed",
-      "lname": "Mahmoud",
-      "email": "ahmedaboraaya399@gmail.com",
-      "pass": "11111111",
-      "role": "user"
     }
   ]
 }

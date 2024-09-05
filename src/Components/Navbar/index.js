@@ -38,6 +38,7 @@ const NavbarComponent = () => {
             as={Link}
             to="/"
             className="text-2xl font-bold text-[#e274a9] me-auto"
+            style={{color: "#e274a9"}}
           >
             Shop Now
           </Navbar.Brand>
@@ -67,11 +68,18 @@ const NavbarComponent = () => {
               </NavLink>
               <NavLink
                 as={NavLink}
+                to="/user/purchases"
+                className="text-[#cb0c6b] font-semibold hover:text-[#39021d] duration-500 no-underline"
+              >
+                Purchases
+              </NavLink>
+              {/* <NavLink
+                as={NavLink}
                 to="/user/lab16"
                 className="text-[#cb0c6b] font-semibold hover:text-[#39021d] duration-500 no-underline"
               >
                 Lab16
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 as={NavLink}
                 to="/"

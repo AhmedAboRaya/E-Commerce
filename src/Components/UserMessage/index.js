@@ -8,6 +8,10 @@ const UserMessage = () => {
   const [messages, setMessages] = useState([]);
 
   const handleDeleteMsg = (id) => {
+    // Show confirmation dialog
+    const isConfirmed = window.confirm("Are you sure you want to delete this message?");
+    if (!isConfirmed) return; // Exit if user cancels
+
     fetch(`http://localhost:5000/messages/${id}`, {
       method: "DELETE",
     })
@@ -32,7 +36,7 @@ const UserMessage = () => {
         }, 500);
       })
       .catch((error) => {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching messages:", error);
         setTimeout(() => {
           setIsLoading(false);
         }, 500);
@@ -44,6 +48,8 @@ const UserMessage = () => {
       <Toaster />
       {isLoading ? (
         <Spinner animation="border" style={{ color: "#e274a9" }} />
+      ) : messages.length === 0 ? (
+        <p className="text-gray-600 text-2xl">No messages found.</p>
       ) : (
         messages.map((msg) => (
           <div
@@ -54,7 +60,10 @@ const UserMessage = () => {
             <p>{msg.email}</p>
             <p>{msg.message}</p>
             <p>{msg.date}</p>
-            <X className="absolute top-2 right-2 border-1 border-red-600 rounded-2xl text-red-600 hover:text-white hover:bg-red-600 duration-500" onClick={() => handleDeleteMsg(msg.id)} />
+            <X
+              className="absolute top-2 right-2 border-1 border-red-600 rounded-2xl text-red-600 hover:text-white hover:bg-red-600 duration-500 cursor-pointer"
+              onClick={() => handleDeleteMsg(msg.id)}
+            />
           </div>
         ))
       )}

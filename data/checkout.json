@@ -1,0 +1,148 @@
+{
+  "checkout": [
+    {
+      "id": "7fd7",
+      "user": {
+        "name": "Ahmed AboRaya",
+        "address": "cairo",
+        "mobile": "01153782020",
+        "email": "ahmed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "name": "Samsung Galaxy ",
+        "price": "810",
+        "brand": "Samsung",
+        "screenSize": "6.2 inches",
+        "storage": "256GB",
+        "category": "Mobile",
+        "camera": "50MP",
+        "battery": "3700mAh",
+        "ram": "",
+        "processor": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png",
+        "specs": {
+          "screenSize": "6.2 inches",
+          "ram": "",
+          "storage": "256GB",
+          "processor": "",
+          "camera": "50MP",
+          "battery": "3700mAh"
+        },
+        "id": "2"
+      },
+      "status": "under delivery",
+      "date": "2024-09-05"
+    },
+    {
+      "id": "05b9",
+      "user": {
+        "name": "Ahmed AboRaya",
+        "address": "cairo",
+        "mobile": "01153782020",
+        "email": "ahmed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "id": "4",
+        "category": "Laptop",
+        "name": "MacBook Air M2",
+        "brand": "Apple",
+        "price": 1199,
+        "specs": {
+          "screenSize": "13.6 inches",
+          "ram": "8GB",
+          "storage": "256GB SSD",
+          "processor": "Apple M2"
+        },
+        "image": "https://smartkoshk.com/cdn/shop/files/MacBook-Air-M2-Egypt-5.png?v=1697885818&width=1946.png"
+      },
+      "status": "pending",
+      "date": "2024-09-05"
+    },
+    {
+      "id": "c1c2",
+      "user": {
+        "name": "Mohamed Ali",
+        "address": "cairo",
+        "mobile": "01131234442",
+        "email": "mohamed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "id": "01f7",
+        "name": "Iphone 12",
+        "brand": "HP",
+        "price": "600",
+        "screenSize": "6.2 inches",
+        "storage": "128 GB",
+        "camera": " 32 GB",
+        "battery": "AMD® Core™ i7",
+        "image": "https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-12-Mini-64GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk_7a401137-d37d-4c2d-a670-314fa37b52ef.4cfb9e0aeaf8d3326d986e399ecc269f.jpeg",
+        "category": "Mobile",
+        "specs": {
+          "screenSize": "6.2 inches",
+          "storage": "128 GB",
+          "camera": " 32 GB",
+          "battery": "AMD® Core™ i7"
+        }
+      },
+      "status": "delivered",
+      "date": "2024-09-05"
+    },
+    {
+      "id": "bdd5",
+      "user": {
+        "name": "Mohamed Ali",
+        "address": "Giza",
+        "mobile": "01312311331",
+        "email": "mohamed.user@example.com",
+        "paymentMethod": "cash",
+        "visaDetails": {
+          "cardNumber": "",
+          "expiryDate": "",
+          "cvv": ""
+        }
+      },
+      "product": {
+        "name": "Samsung Galaxy ",
+        "price": "810",
+        "brand": "Samsung",
+        "screenSize": "6.2 inches",
+        "storage": "256GB",
+        "category": "Mobile",
+        "camera": "50MP",
+        "battery": "3700mAh",
+        "ram": "",
+        "processor": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm3_0R3gorpsFQYvNT1ab2AxaaKSaL4P3EA&s.png",
+        "specs": {
+          "screenSize": "6.2 inches",
+          "ram": "",
+          "storage": "256GB",
+          "processor": "",
+          "camera": "50MP",
+          "battery": "3700mAh"
+        },
+        "id": "2"
+      },
+      "status": "pending",
+      "date": "2024-09-05"
+    }
+  ]
+}

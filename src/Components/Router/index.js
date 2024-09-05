@@ -19,7 +19,9 @@ import AddAdmin from "../AddAdmin";
 import Accounts from "../Accounts";
 import SignUp from "../SingUp";
 import Cart from "../Cart";
-import BuyNow from "../BuyNow";
+import Checkout from "../Checkout";
+import Purchases from "../Purchases";
+import AdminPurchases from "../AdminPurchases";
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -32,9 +34,10 @@ const Router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="buynow" element={<BuyNow />} />
+        <Route path="checkout/:id" element={<Checkout />} />
+        <Route path="purchases" element={<Purchases />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="lab16" element={<Lab16 />} />
+        {/* <Route path="lab16" element={<Lab16 />} /> */}
       </Route>
 
       <Route path="admin" element={<AdminLayout />}>
@@ -43,6 +46,7 @@ const Router = createBrowserRouter(
         <Route path="addproduct" element={<AddProduct />} />
         <Route path="addadmin" element={<AddAdmin />} />
         <Route path="admins" element={<Accounts />} />
+        <Route path="purchases" element={<AdminPurchases />} />
       </Route>
     </>
   )

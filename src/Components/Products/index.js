@@ -93,9 +93,7 @@ const Shop = () => {
   };
 
   const handleBuyNow = (id) => {
-    console.log("Redirecting to checkout");
-    console.log(id); 
-    // navigate(`/user/checkout/${id}`);
+    navigate(`/user/checkout/${id}`);
   };
 
   const mobileProducts = products.filter(
@@ -114,7 +112,7 @@ const Shop = () => {
         </div>
       ) : (
         <div>
-          <ShoppingCart onClick={handleClickCart} className="text-pink-500 size-16 absolute mt-2 left-[-8px] border-pink-500 border-1 p-2 rounded-r-full hover:left-0 hover:text-white hover:bg-pink-500 duration-300 "/>
+          {/* <ShoppingCart onClick={handleClickCart} className="text-pink-500 size-16 absolute mt-2 left-[-8px] border-pink-500 border-1 p-2 rounded-r-full hover:left-0 hover:text-white hover:bg-pink-500 duration-300 "/> */}
           <h1 className="text-[#e274a9] text-center mt-4 animate-fadeIn">Smart Phones</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 py-4">
             {mobileProducts.map((product) => (
@@ -126,7 +124,7 @@ const Shop = () => {
                 brand={product.brand}
                 image={product.image}
                 onClick={() => openModal(product)}
-                handleAddToCart={handleAddToCart}
+                // handleAddToCart={handleAddToCart}
                 handleBuyNow={handleBuyNow}
               />
             ))}
@@ -142,7 +140,7 @@ const Shop = () => {
                 brand={product.brand}
                 image={product.image}
                 onClick={() => openModal(product)}
-                handleAddToCart={handleAddToCart}
+                // handleAddToCart={handleAddToCart}
                 handleBuyNow={handleBuyNow}
               />
             ))}

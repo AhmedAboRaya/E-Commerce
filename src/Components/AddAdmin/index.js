@@ -51,7 +51,7 @@ const AddAdmin = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 animate-fadeIn">
+    <form onSubmit={handleSubmit} className="p-4 animate-fadeIn container">
       <div>
         <Toaster />
       </div>
