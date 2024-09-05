@@ -25,7 +25,7 @@ This project is an E-Commerce System that allows users and admins to perform var
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/AhmedAboRaya/E-Commerce.git
     ```
 2. **Navigate to the project directory:**
     ```bash
