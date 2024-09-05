@@ -35,14 +35,6 @@
       "role": "admin"
     },
     {
-      "id": "5",
-      "fname": "Omar",
-      "lname": "Farouk",
-      "email": "omar.user@example.com",
-      "pass": "user789",
-      "role": "user"
-    },
-    {
       "id": "6",
       "fname": "Laila",
       "lname": "Saad",

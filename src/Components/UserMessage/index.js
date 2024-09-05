@@ -2,15 +2,22 @@ import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import { X } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
+import ConfirmationDialog from "../ConfirmationDialog";
 
 const UserMessage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [messages, setMessages] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenDialog = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsOpen(false);
+  };
 
   const handleDeleteMsg = (id) => {
-    const isConfirmed = window.confirm("Are you sure you want to delete this message?");
-    if (!isConfirmed) return; 
-
     fetch(`http://localhost:5000/messages/${id}`, {
       method: "DELETE",
     })
@@ -18,6 +25,7 @@ const UserMessage = () => {
       .then(() => {
         setMessages(messages.filter((msg) => msg.id !== id));
         toast.success("Message deleted successfully!");
+        setIsOpen(false);
       })
       .catch((error) => {
         console.error("Error deleting message:", error);
@@ -61,7 +69,17 @@ const UserMessage = () => {
             <p>{msg.date}</p>
             <X
               className="absolute top-2 right-2 border-1 border-red-600 rounded-2xl text-red-600 hover:text-white hover:bg-red-600 duration-500 cursor-pointer"
-              onClick={() => handleDeleteMsg(msg.id)}
+              onClick={() => handleOpenDialog()}
+            />
+            <ConfirmationDialog
+              isOpen={isOpen}
+              closeModal={handleCloseDialog}
+              handleLeftButtonClick={handleCloseDialog}
+              handleRightButtonClick={handleDeleteMsg}
+              txtInLeftButton="Cancel"
+              txtInRightButton="Delete"
+              title="Are you sure you want delete this message?"
+              id={msg.id}
             />
           </div>
         ))

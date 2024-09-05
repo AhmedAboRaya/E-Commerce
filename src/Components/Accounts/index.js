@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Spinner } from "react-bootstrap";
+import ConfirmationDialog from "../ConfirmationDialog";
 
 const Accounts = () => {
   const [users, setUsers] = useState([]);
@@ -10,6 +11,15 @@ const Accounts = () => {
   const [error, setError] = useState(null);
   const [filter, setFilter] = useState("admin");
   const [deletingUserId, setDeletingUserId] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenDialog = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     fetch("http://localhost:7000/users")
@@ -29,8 +39,6 @@ const Accounts = () => {
   };
 
   const handleDelete = (userId) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this user?");
-    if (confirmDelete) {
       setDeletingUserId(userId);
       fetch(`http://localhost:7000/users/${userId}`, {
         method: "DELETE",
@@ -38,7 +46,7 @@ const Accounts = () => {
         .then((response) => {
           if (response.ok) {
             setUsers(users.filter(user => user.id !== userId));
-            toast.success("User deleted successfully!");
+            toast.success("Account deleted successfully!");
           } else {
             toast.error("Failed to delete user.");
           }
@@ -49,7 +57,6 @@ const Accounts = () => {
         .finally(() => {
           setDeletingUserId(null);
         });
-    }
   };
 
   const filteredUsers = users.filter((user) => user.role === filter);
@@ -79,6 +86,17 @@ const Accounts = () => {
         <ul className="space-y-4">
           {filteredUsers.length > 0 ? (
             filteredUsers.map((user) => (
+              <>
+              <ConfirmationDialog
+              isOpen={isOpen}
+              closeModal={handleCloseDialog}
+              handleLeftButtonClick={handleCloseDialog}
+              handleRightButtonClick={handleDelete}
+              txtInLeftButton="Cancel"
+              txtInRightButton="Delete"
+              title="Are you sure you want delete this account?"
+              id={user.id}
+            />
               <li
                 key={user.id}
                 className="bg-white p-4 rounded-lg shadow-md hover:shadow-2xl duration-500 border-1 border-[#cb0c6b]"
@@ -89,7 +107,7 @@ const Accounts = () => {
                   </h2>
                   <button
                     className="border-1 border-red-600 rounded-2xl text-red-600 hover:text-white hover:bg-red-600 duration-500"
-                    onClick={() => handleDelete(user.id)}
+                    onClick={handleOpenDialog}
                   >
                     <X />
                   </button>
@@ -98,11 +116,13 @@ const Accounts = () => {
                 <p className="text-gray-700">Password: {user.pass}</p>
                 <p className="text-gray-600">Role: {user.role}</p>
               </li>
+              </>
             ))
           ) : (
             <div className="text-center text-gray-600">No users found.</div>
           )}
         </ul>
+        
       )}
     </div>
   );
